@@ -26,7 +26,6 @@ def fetch_data(ticker, market, start, end):
     :return: Pandas DataFrame with the historical data.
     """
     full_ticker = get_full_ticker(ticker, market)
-    print(full_ticker)
     data = yf.download(full_ticker, start=start, end=end)
     return data
 
