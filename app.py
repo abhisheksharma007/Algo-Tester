@@ -1,4 +1,7 @@
 import streamlit as st
+import json
+import pandas as pd
+
 from datetime import datetime
 from data_fetcher import fetch_data
 from backtest_runner import run_backtest
@@ -46,5 +49,6 @@ if st.button('Run Backtest'):
 
         # Output the results
         st.write(f"Final Portfolio Value: ₹{final_value:,.2f}")
-
-        # Display trades
+        
+        df = pd.DataFrame(trades)
+        st.dataframe(df)
