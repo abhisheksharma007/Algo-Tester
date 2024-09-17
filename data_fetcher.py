@@ -8,6 +8,12 @@ def get_full_ticker(ticker, market):
     :param market: Market identifier ('NSE' or 'BSE').
     :return: Full ticker symbol including suffix.
     """
+    
+    if ticker.upper() in ['NSE', '^NSEI']:
+        return '^NSEI'
+    elif ticker.upper() in ['BSE', '^BSESN']:
+        return '^BSESN'
+    
     if market == 'NSE':
         return f"{ticker}.NS"
     elif market == 'BSE':
