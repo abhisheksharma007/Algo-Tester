@@ -1,7 +1,4 @@
 #Algo Tester
-#Date: 2022-07-25
-
-This is a sample project for Algorithm 
 
 ```sh
 python -m venv venv
